@@ -1,8 +1,8 @@
 <script>
 const list = [
 	{ value: "mod-tools", link: "download/mod-tools136-1.4.3.jar" },
-	{ value: "mod.make", link: "_" },
-	{ value: "betterjs", link: "download/BetterJS-1.2.3.jar" },
+	{ value: "mod.make", link: "#" },
+	{ value: "betterjs", link: "download/BetterJS-1.2.4.jar" },
 ];
 
 module.exports = {
@@ -23,7 +23,7 @@ module.exports = {
 			v-for="item in list"
 			class="link"
 			:href="item.link"
-			:download="link == null ? false : true"
+			:download="link == null ? "" : true"
 			>{{ item.value }}</a
 		>
 	</div>
