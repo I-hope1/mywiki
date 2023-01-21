@@ -23,7 +23,7 @@ module.exports = {
 			v-for="item in list"
 			class="link"
 			:href="item.link"
-			:download="link == null ? "" : true"
+			:download="link == null ? '' : true"
 			>{{ item.value }}</a
 		>
 	</div>
