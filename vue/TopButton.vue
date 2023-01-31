@@ -58,6 +58,9 @@ module.exports = {
 	justify-content: center;
 	flex-direction: column;
 
+	cursor: pointer;
+	user-select: none;
+
 	height: 2rem;
 	margin-left: 2rem;
 	border: none;

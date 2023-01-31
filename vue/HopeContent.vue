@@ -11,7 +11,7 @@ module.exports = {
 };
 </script>
 <template>
-	<Menu v-if="focus == 'menu'"></Menu>
+	<menu v-if="focus == 'menu'"></menu>
 	<Download v-if="focus == 'download'"></Download>
 	<!-- </div> -->
 </template>

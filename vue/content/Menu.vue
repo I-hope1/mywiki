@@ -1,9 +1,7 @@
 <script>
 module.exports = {
 	data() {
-		return {
-			list: list,
-		};
+		return {};
 	},
 };
 </script>
