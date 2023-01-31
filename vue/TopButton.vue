@@ -3,6 +3,7 @@ const list = [
 	{ name: "menu", link: "#" },
 	{ name: "download", link: "#" },
 ];
+const { content } = globalData;
 module.exports = {
 	data() {
 		return {
@@ -12,12 +13,11 @@ module.exports = {
 	},
 	computed: {},
 	mounted() {
-		globalData.content.focus = this.focus;
+		content.focus = this.focus;
 	},
 	methods: {
 		sw(event) {
-			globalData.content.focus = this.focus = event.target.innerText;
-			console.log(this.focus);
+			content.focus = this.focus = event.target.innerText;
 		},
 	},
 };
@@ -31,7 +31,7 @@ module.exports = {
 		}"
 		@click="sw"
 	>
-		{{ item.name }}
+		<font>{{ item.name }}</font>
 	</a>
 </template>
 <style>
@@ -50,29 +50,48 @@ module.exports = {
 	text-decoration: none;
 	color: gray;
 	margin: 0em;
-	padding: 2px 9px;
+	padding: 9px 2px;
 	appearance: auto;
 	text-rendering: auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 
 	height: 2rem;
-	margin-left: 1rem;
+	margin-left: 2rem;
 	border: none;
 	/* background-color: rgba(0, 0, 0, 0); */
-	border-bottom: 2px solid rgb(121, 121, 242);
+	/* border-bottom: 2px solid rgb(121, 121, 242); */
 	outline: none;
-	transition: 0.1s all;
+	transition: 0.2s all;
 }
+.TopButton > font {
+	flex: 1;
+}
+.TopButton::after {
+	content: "";
+	width: 140%;
+	/*position: absolute;*/
+	height: 2px;
+
+	transition: 0.2s all;
+	background-color: darkgray;
+}
+.active::after,
+.TopButton:hover::after {
+	background-color: rgb(0, 255, 255);
+}
+.active::after {
+	box-shadow: rgb(0, 255, 255) 0px 0px 20px 1px, rgb(0, 255, 255) 0px 0px 20px 1px;
+}
+
 .TopButton:hover {
 	/* background-color: skyblue; */
 	color: #fff;
-	border-bottom-color: rgb(0, 255, 255);
 }
-.active {
+.active > font {
 	color: #ddd;
-	text-shadow: 1px 1px 10px #ffffff;
-	border-bottom-color: rgb(10, 227, 227);
+	text-shadow: 0px 0px 10px #ccffff;
 }
 </style>
