@@ -1,6 +1,6 @@
 <script>
 const list = [
-	{ value: "mod-tools", href: "download/mod-tools136-1.4.3.2.jar" },
+	{ value: "mod-tools", href: "download/mod-tools136-1.4.3.jar" },
 	// { value: "mod.make", link: "#" },
 	{ value: "betterjs", href: "download/BetterJS-1.2.4.jar" },
 ];
