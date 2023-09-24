@@ -76,7 +76,7 @@ module.exports = {
 	content: "";
 	width: 140%;
 	/*position: absolute;*/
-	height: 2px;
+	height: 3px;
 
 	transition: 0.2s all;
 	background-color: darkgray;
@@ -95,6 +95,6 @@ module.exports = {
 }
 .active > font {
 	color: #ddd;
-	text-shadow: 0px 0px 10px #ccffff;
+	text-shadow: 0px 0px 10px 4px #ccffff;
 }
 </style>
