@@ -49,12 +49,11 @@ module.exports = {
 .TopButton {
 	text-decoration: none;
 	color: gray;
-	margin: 0em;
-	padding: 9px 2px;
+	margin: 0;
 	appearance: auto;
 	text-rendering: auto;
 	display: flex;
-	align-items: center;
+	/* align-items: center; */
 	justify-content: center;
 	flex-direction: column;
 
@@ -62,7 +61,7 @@ module.exports = {
 	user-select: none;
 
 	height: 2rem;
-	margin-left: 2rem;
+	margin-left: 1.2rem;
 	border: none;
 	/* background-color: rgba(0, 0, 0, 0); */
 	/* border-bottom: 2px solid rgb(121, 121, 242); */
@@ -71,10 +70,14 @@ module.exports = {
 }
 .TopButton > font {
 	flex: 1;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 .TopButton::after {
 	content: "";
-	width: 140%;
+	position: relative;
+	display: flex;
+	width: 100%;
 	/*position: absolute;*/
 	height: 3px;
 
@@ -86,7 +89,9 @@ module.exports = {
 	background-color: rgb(0, 255, 255);
 }
 .active::after {
-	box-shadow: rgb(0, 255, 255) 0px 0px 20px 1px, rgb(0, 255, 255) 0px 0px 20px 1px;
+	box-shadow: rgb(0, 255, 255) 0px 0px 20px 1px,
+	 rgb(0, 255, 255) 0px 0px 20px 1px,
+	 rgb(0, 255, 255) 0px 0px 20px 1px;
 }
 
 .TopButton:hover {
@@ -95,6 +100,8 @@ module.exports = {
 }
 .active > font {
 	color: #ddd;
-	text-shadow: 0px 0px 10px 4px #ccffff;
+	text-shadow:
+	0px 1px 3px #ccffff,
+	0px 1px 3px #ccffff;
 }
 </style>

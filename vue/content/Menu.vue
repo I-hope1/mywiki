@@ -6,13 +6,16 @@ module.exports = {
 };
 </script>
 <template>
-	<pre>nothing</pre>
+	<div class="menu">
+		<img src="screenshots/frag.png" />
+		<img src="screenshots/review0.png" />
+		<img src="screenshots/review1.png" />
+	</div>
 </template>
 <style scoped>
-pre {
-	transition: all 0.2s;
-}
-pre:hover {
-	color: pink;
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 </style>

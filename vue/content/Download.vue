@@ -1,8 +1,8 @@
 <script>
 const list = [
-	{ value: "mod-tools", href: "download/mod-tools136-1.4.3.jar" },
+	{ value: "mod-tools", version: '1.4.3.2', href: "download/mod-tools136" },
 	// { value: "mod.make", link: "#" },
-	{ value: "betterjs", href: "download/BetterJS-1.2.4.jar" },
+	{ value: "betterjs", version: '1.2.4', href: "download/BetterJS" },
 ];
 
 module.exports = {
@@ -16,7 +16,8 @@ module.exports = {
 
 <template>
 	<div class="list">
-		<a v-for="item in list" class="link" :href="item.href" :download="item.value">{{
+		<a v-for="item in list" class="link" :href="`${item.href}-${item.version}.jar`"
+		 :download="`${item.value}-${item.version}.jar`">{{
 			item.value
 		}}</a>
 	</div>
@@ -31,13 +32,15 @@ module.exports = {
 }
 .link {
 	color: #ccc;
+	display: flex;
+	justify-content: center;
+	width: 100%;
 	background: rgba(1, 1, 1, 0.1);
 	text-decoration: none;
 	flex: 100%;
-	display: block;
-	padding: 1rem 2rem;
+	padding: 1rem 1rem;
 	margin: 0.5rem 0;
-	border: 4px solid #ccccff66;
+	border: 1px solid #ccccff33;
 	transition: all 0.2s;
 	box-shadow: rgb(84, 84, 255) 5px 5px 2px 2px, rgb(5, 47, 255) 5px 5px 2px 2px,
 		rgb(19, 45, 217) 5px 5px 2px 2px, rgb(3, 3, 255) -3px -4px 2px 2px;

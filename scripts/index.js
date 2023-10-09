@@ -31,9 +31,9 @@ async function load(path, name, _app) {
 	return app;
 };
 (async function () {
-	const content = await load("content/Download", "Download");
+	const content = await load("HopeContent", "hopecontent");
 	await load("content/Menu", "menu", content);
-	await load("HopeContent", "hopecontent", content);
+	await load("content/Download", "Download", content);
 	content.mount(".content")
 
 	const topApp = await load("TopButton", "topbutton");
