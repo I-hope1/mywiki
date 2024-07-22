@@ -3,6 +3,7 @@ const list = [
 	{ value: "mod-tools", version: '1.4.3.2', href: "download/mod-tools136" },
 	// { value: "mod.make", link: "#" },
 	{ value: "betterjs", version: '1.2.4', href: "download/BetterJS" },
+	{ value: "mod.make", version: "1.4", href: "download/mod.make136" },
 ];
 
 module.exports = {
@@ -16,10 +17,15 @@ module.exports = {
 
 <template>
 	<div class="list">
-		<a v-for="item in list" class="link" :href="`${item.href}-${item.version}.jar`"
-		 :download="`${item.value}-${item.version}.jar`">{{
+		<a
+			v-for="item in list"
+			class="link"
+			:href="`${item.href}-${item.version}.jar`"
+			:download="`${item.value}-${item.version}.jar`"
+			>{{
 			item.value
-		}}</a>
+			}}</a
+		>
 	</div>
 </template>
 
