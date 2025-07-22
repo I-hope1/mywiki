@@ -1,8 +1,10 @@
 body {
+	background-image: url(https://picsum.photos/1920/1080);
 	background-color: #222;
 	margin: 0;
 }
 .container {
+	box-shadow: #0005 0 0 10px;
 	min-height: 100vh;
 	width: 100%;
 	display: flex;

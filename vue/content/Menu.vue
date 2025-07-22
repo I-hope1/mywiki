@@ -18,4 +18,9 @@ module.exports = {
 	align-items: center;
 	justify-content: center;
 }
+.menu > img {
+	margin: 1rem;
+	box-shadow: #0005 0 0 10px;
+	border-radius: 1rem;
+}
 </style>
