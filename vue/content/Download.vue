@@ -41,21 +41,20 @@ module.exports = {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	background: rgba(1, 1, 1, 0.1);
+	background: #0003;
+	backdrop-filter: blur(5px);
 	text-decoration: none;
 	flex: 100%;
 	padding: 1rem 1rem;
 	margin: 0.5rem 0;
 	border: 1px solid #ccccff33;
 	transition: all 0.2s;
-	box-shadow: rgb(84, 84, 255) 5px 5px 2px 2px, rgb(5, 47, 255) 5px 5px 2px 2px,
-		rgb(19, 45, 217) 5px 5px 2px 2px, rgb(3, 3, 255) -3px -4px 2px 2px;
+	box-shadow: #0005 0 0 10px;
 	border-radius: 1rem;
 }
 .link:hover {
 	color: #fff;
 	border-color: rgb(2, 2, 164);
-	box-shadow: inset rgb(2, 2, 164) 5px 5px 10px 2px, rgb(5, 47, 255) 5px 5px 2px 2px,
-		rgb(19, 45, 217) 3px 3px 3px 2px, rgb(3, 3, 255) -3px -4px 2px 2px;
+	box-shadow: #000a 0 0 20px;
 }
 </style>
